@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from "next/navigation";
-import NavbarComponent from "./NavbarComponent";
+import NavbarComponent from "./NavbarComponents";
 
 export default function NavbarWrapper() {
     const pathname = usePathname();

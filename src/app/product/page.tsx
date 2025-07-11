@@ -4,7 +4,7 @@ import { ProductType } from '@/types/productType';
 import Link from 'next/link';
 
 export default async function page() {
-  const res = await fetch(`${process.env.BASE_URL_API}products`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_API}products`);
   if (!res.ok) {
     throw new Error('Failed to fetch products');
   }
