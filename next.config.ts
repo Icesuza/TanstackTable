@@ -1,10 +1,11 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  // compiler: {
-  //   styledComponents: true,
-  // }
-};
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['cdn.dummyjson.com'], // 👈 Add this line
+  },
+}
+
+module.exports = nextConfig
+
