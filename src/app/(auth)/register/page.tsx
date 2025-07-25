@@ -50,7 +50,7 @@ const formSchema = z.object({
 
 type RegisterFormValue = z.infer<typeof formSchema>;
 
-export default function page() {
+export default function Page() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 

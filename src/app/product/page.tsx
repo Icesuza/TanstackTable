@@ -9,10 +9,12 @@ import Loading from '../loading';
 export default function ProductPage() {
 
   // Using RTK Query to fetch products
-  const { data, isLoading, error } = useGetProductsQuery();
-  if (isLoading) return <Loading/>;
-  if (error) return <p className='text-red-500 text-center'>Failed to load products</p>;
-  const products = data?.products as ProductType[];
+const { data, isLoading, error } = useGetProductsQuery();
+if (isLoading) return <Loading />;
+if (error || !data) return <p className='text-red-500 text-center'>Failed to load products</p>;
+
+const products = data?.products as ProductType[];
+
 
   return (
     <section className='w-[90%] mx-auto my-10'>

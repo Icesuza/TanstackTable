@@ -1,5 +1,6 @@
-import { CartItems, ProductType } from "@/types/productType"
+import { CartItems, ProductType} from "@/types/productType"
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+
 
 type CartState = {
     items: CartItems[]
@@ -27,9 +28,9 @@ const cartSlice = createSlice({
           id: product.id,
           title: product.title,
           price: product.price,
-          thumbnail: product.thumbnail || "/placeholder.svg",
+          thumbnail: product.images[0] || "/placeholder.svg",
           description: product.description,
-            category: product.category,
+          category: product.category.name,
           quantity: 1,
         })
       }

@@ -1,10 +1,22 @@
 export type ProductType = {
     id: number;
     title: string;
+    slug?: string;
     description: string;
     price: number;
-    thumbnail: string;
-    category: string;
+    images: string[];
+    category: Category;
+    createdAt?: string;
+    updatedAt?: string;
+}
+
+export type Category = {
+    id: number;
+    name: string;
+    slug: string;
+    image: string;
+    createdAt: string;
+    updatedAt: string;
 }
 
 export type CartItems = {
@@ -22,10 +34,10 @@ export type ProductDetailType = {
     title: string;
     description: string;
     price: number;
-    thumbnail: string;
+    images: string[];
     discountPercentage: number;
     stock: number;
-    category: string;
+    category: Category;
     reviews: Reviews[];
 }
 

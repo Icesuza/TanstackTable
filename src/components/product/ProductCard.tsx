@@ -27,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                         width={300}
                         height={300}
                         className="w-full"
-                        src={product.thumbnail}
+                        src={product.images[0]}
                         alt={product.title}
                         unoptimized
                         priority
@@ -38,7 +38,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className="p-4">
                     <h3 className="text-lg font-medium mb-2 line-clamp-1">{product.title}</h3>
                     <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
-                    <p className="text-gray-500 text-xs mb-2">Category: {product.category}</p>
+                    <p className="text-gray-500 text-xs mb-2">Category: {product.category.name}</p>
                     <div className="flex items-center justify-between">
                         <span className="font-bold text-lg">${product.price}</span>
                     </div>

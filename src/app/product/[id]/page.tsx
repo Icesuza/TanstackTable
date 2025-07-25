@@ -21,7 +21,7 @@ export default function ProductDetail() {
             <div className="flex bg-white rounded-lg shadow dark:bg-gray-800 flex-col md:flex-row">
                 <div className="relative w-full md:w-[50%] flex justify-center items-center">
                     <Image
-                        src={data.thumbnail}alt={data.title}
+                        src={data.images[0]}alt={data.title}
                         width={300}
                         height={300}
                         unoptimized
@@ -70,7 +70,7 @@ export default function ProductDetail() {
                             className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg ">Add to Cart</button>
                     </div>
                     <p className="text-sm text-gray-500 dark:text-gray-300">{data.description}</p>
-                    <p className="text-lg dark:text-gray-300 bg-blue-300 p-2 rounded-lg mt-5 text-white">Category : {data.category}</p>
+                    <p className="text-lg dark:text-gray-300 bg-blue-300 p-2 rounded-lg mt-5 text-white">Category : {data.category.name}</p>
                 </form>
             </div>
         </div>
