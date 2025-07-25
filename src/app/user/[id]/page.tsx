@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import UserDetailPage from './UserDetailPage'
 
 export async function generateMetadata(
-  // ✅ Let Next.js infer the correct type
+
   props: any
 ): Promise<Metadata> {
   const { params } = props
